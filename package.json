@@ -1,0 +1,53 @@
+{
+  "name": "neon-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@umijs/fabric": "^2.10.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.2",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.5.5"
+  },
+  "lint-staged": {
+    "src/**/*.ts?(x)": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.scss": [
+      "stylelint --syntax scss --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1"
+  }
+}
