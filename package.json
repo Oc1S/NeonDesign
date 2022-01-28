@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "dumi dev",
+    "build:site": "rimraf doc-site && dumi build",
+    "preview:site": "cross-env SITE_BUILD_ENV=PREVIEW npm run build:site && serve doc-site",
     "commit": "git-cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,12 +20,17 @@
     "@types/react-dom": "^17.0.11",
     "@umijs/fabric": "^2.10.1",
     "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
+    "dumi": "^1.1.38",
     "husky": "^7.0.4",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
     "lint-staged": "^12.3.2",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "serve": "^13.0.2",
     "typescript": "^4.5.5"
   },
   "lint-staged": {

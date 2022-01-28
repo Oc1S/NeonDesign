@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 interface AlertProps {
+  /**
+   * @description       Alert 的类型
+   * @default           'info'
+   */
   kind?: 'info' | 'warning';
 }
 
@@ -14,7 +18,7 @@ const kinds: KindMap = {
 
 const Alert: React.FC<AlertProps> = ({ children, kind = 'info', ...rest }) => (
   <div className="neon-alert" style={{ backgroundColor: kinds[kind] }} {...rest}>
-    {{ children }}
+    {children}
   </div>
 );
 
