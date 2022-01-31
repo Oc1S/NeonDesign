@@ -5,7 +5,7 @@ hero:
   desc: 新配色方案组件库
   actions:
     - text: 快速上手
-      link: /getting-started
+      link: /components
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: 特性 1

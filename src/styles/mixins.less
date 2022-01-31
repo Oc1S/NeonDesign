@@ -1,0 +1,40 @@
+.disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  &:hover {
+    background-color: #f5f5f5;
+  }
+  > * {
+    pointer-events: none; // 清除鼠标事件
+  }
+}
+
+.neon-bg {
+  background: linear-gradient(183deg, rgba(141, 35, 46, 0.5) 1%, rgba(141, 35, 46, 0) 60%),
+    linear-gradient(
+      250deg,
+      rgba(141, 35, 46, 0) 21%,
+      rgba(141, 35, 46, 0.2) 20%,
+      rgba(11, 35, 47, 0.2) 50%
+    ),
+    linear-gradient(
+      250deg,
+      rgba(141, 35, 46, 0) 23%,
+      rgba(141, 35, 46, 0.2) 20%,
+      rgba(11, 35, 47, 0.2) 50%
+    ),
+    linear-gradient(
+      250deg,
+      rgba(141, 35, 46, 0) 25%,
+      rgba(141, 35, 46, 0.2) 20%,
+      rgba(11, 35, 47, 0.2) 50%
+    );
+
+  background-color: #0b232f;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+}
+
+.neon-shadow {
+  box-shadow: 0 0 10px rgba(#4995dd, .3);
+}

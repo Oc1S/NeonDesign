@@ -1,0 +1,81 @@
+@import '../../../styles/variables.less';
+@import '../../../styles/mixins.less';
+
+[id*='-demo'] .@{prefix}-divider{
+  margin: 3em 0;
+}
+
+.@{prefix}-divider{
+  display: flex;
+  margin: 1em 0;
+  min-width: 100%;
+  white-space: nowrap;
+  &::before,
+  &::after {
+      content: '';
+      position: relative;
+      top: 50%;
+      width: 50%;
+      border-top: 1px solid #ddd;
+      border-bottom: 0;
+      transform: translateY(50%);
+  }
+
+  &-vertical{
+    display: inline-block;
+    margin: 0 0.5em;
+    height: 100%;
+    border-left: 1px solid #ddd;
+    vertical-align: bottom;
+  }
+
+  &-l{
+    &::before{
+      width: 5%;
+    }
+    &::after {
+      width: 95%;
+    }
+  }
+  &-r{
+    &::before{
+      width: 95%;
+    }
+    &::after {
+      width: 5%;
+    }
+  }
+
+  // 虚线
+  &-dashed{
+    &::before,
+    &::after {
+      border-top: 1px dashed #ddd;
+    }
+  }
+
+  &-no-left-line{
+    &::before
+     {
+     width: 0;
+    }
+  }
+
+  &-no-right-line{
+    &::after
+     {
+     width: 0;
+    }
+  }
+
+  .@{prefix}-divider-inner {
+    display: inline-block;
+    padding: 0 1em;
+    font-weight: 500;
+    &-plain{
+      font-weight: 400;
+
+    }
+  }
+}
+

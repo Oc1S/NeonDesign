@@ -9,7 +9,7 @@ interface AlertProps {
   kind?: 'info' | 'warning';
 }
 
-type KindMap = Record<Required<AlertProps>['kind'], string>;
+export type KindMap = Record<Required<AlertProps>['kind'], string>;
 
 const kinds: KindMap = {
   info: '#5352ED',
