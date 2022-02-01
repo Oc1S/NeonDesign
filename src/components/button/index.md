@@ -1,7 +1,7 @@
 ---
 title: Button 按钮
 group:
-  title: 基础组件
+  title: 基础
   order: 1
 ---
 
@@ -26,7 +26,7 @@ group:
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | size | 设置按钮大小 | `large` \| `middle` \| `small` | `middle` |
-| square | 设置方角按钮 | boolean                        | false    |
+| square | 设置方角按钮 | boolean | false |
 | block | 将按钮宽度调整为其父宽度 | boolean | false |
 | disabled | 设置按钮失效 | boolean | false |
 | onClick | 点击按钮时的回调 | (event) => void | - |

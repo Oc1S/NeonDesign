@@ -8406,7 +8406,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/@types/react/16.14.22:
-    resolution: {integrity: sha512-4NnkxKDd2UO9SiCckuhCQOCzdO+RtE4Epf1D6eGz3f9jZjiIXOVo+Bk3jqSad+8EOT+LBXwKdkFX0V0F+NFzDQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/react/download/@types/react-16.14.22.tgz}
+    resolution: {integrity: sha512-4NnkxKDd2UO9SiCckuhCQOCzdO+RtE4Epf1D6eGz3f9jZjiIXOVo+Bk3jqSad+8EOT+LBXwKdkFX0V0F+NFzDQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/react/-/react-16.14.22.tgz}
     name: '@types/react'
     version: 16.14.22
     dependencies:
