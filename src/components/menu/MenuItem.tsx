@@ -1,0 +1,79 @@
+import React, { useContext, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { selectedIndexsContext } from './index';
+import { activeContext } from './SubMenu';
+import { log } from 'console';
+
+const prefix = 'neon-menu-item';
+
+export interface MenuItemProps extends React.HTMLAttributes<HTMLElement> {
+  className?: string;
+  nav?: string;
+  index: string;
+  disabled?: boolean;
+}
+
+const MenuItem: React.FC<MenuItemProps> = ({
+  className,
+  children,
+  nav,
+  index,
+  onClick,
+  disabled,
+  ...rest
+}) => {
+  const { selectedIndex, handleSelectIndex } = useContext(selectedIndexsContext);
+  const { subItemStateArray, setSubItemStateArray } = useContext(activeContext);
+
+  // console.log(index, 'index@state', subItemStateArray);
+
+  useEffect(() => {
+    if (!subItemStateArray) return;
+    const subItemIndex = subItemStateArray.findIndex((item) => item.index === index);
+    console.log('index', index, subItemIndex, subItemStateArray);
+
+    if (subItemIndex === -1) {
+      subItemStateArray.push({ index, active: index === selectedIndex });
+      /*
+       *展开运算符添加数组元素未生效?
+       */
+      setSubItemStateArray([...subItemStateArray]);
+    } else {
+      subItemStateArray[subItemIndex].active = index === selectedIndex;
+      setSubItemStateArray([...subItemStateArray]);
+    }
+  }, [selectedIndex]);
+
+  const history = useHistory();
+  const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    if (disabled) return;
+    e.stopPropagation();
+
+    !!onClick && onClick(e);
+
+    !!nav && history.push(nav);
+
+    handleSelectIndex?.(index);
+  };
+
+  const classes = classNames(`${prefix}`, className, {
+    [`${prefix}-selected`]: !!index && selectedIndex === index,
+    [`${prefix}-disabled`]: disabled,
+  });
+
+  return (
+    <li className={classes} {...rest} onClick={(e) => handleClick(e)}>
+      {children}
+    </li>
+  );
+};
+
+MenuItem.propTypes = {
+  index: PropTypes.string.isRequired,
+  nav: PropTypes.string,
+  className: PropTypes.string,
+};
+
+export default MenuItem;

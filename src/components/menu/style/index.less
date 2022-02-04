@@ -1,0 +1,138 @@
+@import '../../../styles/variables.less';
+@import '../../../styles/mixins.less';
+@import '../../../styles/global.less';
+
+@menu-height: 3em;
+@vertical-menu-height: 2.5em;
+/* [id*='menu-'] .@{prefix}-menu{
+} */
+
+.@{prefix}-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  line-height: @menu-height;
+  height: @menu-height;
+  color: @defaultColor;
+  white-space: nowrap;
+  .dark-bg();
+  &-item {
+    position: relative;
+    display: inline-block;
+    margin: 0 1em;
+    cursor: pointer;
+  white-space: nowrap;
+  &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &:hover {
+      color: rgb(204, 217, 233);
+      &::after {
+        border-bottom: 3px solid rgb(3 105 161);
+      }
+    }
+    &-selected {
+      color: rgb(1, 149, 190);
+      border-bottom: 0 !important;
+      &:hover {
+        color: rgb(1, 149, 190) !important;
+        &::after {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    // item-disabled
+    &-disabled {
+      .neon-disabled();
+      &::after {
+        border: 0 !important;
+      }
+    }
+  }
+  &-submenu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 1em;
+    cursor: pointer;
+    &-popup {
+      position: absolute;
+      top: @menu-height;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.7s;
+      &-visible {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      &-container {
+        display: flex;
+        flex-direction: column;
+        margin: 2px 0;
+        border-radius: 0.25em;
+        .neon-bg();
+        .neon-shadow();
+        * {
+          &:hover {
+            &::after {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.@{prefix}-menu-vertical {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 12em;
+  line-height: @vertical-menu-height;
+  color: @defaultColor;
+  white-space: nowrap;
+  overflow: hidden;
+  .dark-bg();
+  .@{prefix}-menu-item {
+    margin: 0 ;
+    padding:0 1em ;
+    
+    &:hover {
+      color: rgb(204, 217, 233);
+      &::after {
+        border-bottom: 0;
+      }
+    }
+  }
+  .@{prefix}-menu-submenu{
+    display: flex;
+    flex-direction:column;
+    align-items: start;
+    margin: 0;
+    padding:0 1em ;
+    flex: 1;
+    &-active{
+      color: rgb(204, 217, 233);
+    }
+  }
+}
+  
+/* collapse */
+.@{prefix}-menu-submenu-collapse{
+  max-height:0;
+  transition: 0.7s;
+  overflow: hidden;
+  &-container{
+    display: flex;
+    flex-direction:column;
+  }
+}
+
+

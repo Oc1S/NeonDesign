@@ -11709,7 +11709,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/history/4.10.1:
-    resolution: {integrity: sha1-MzcaZeOoOyZ0NOKz87G0xYqtTPM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/history/download/history-4.10.1.tgz}
+    resolution: {integrity: sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/history/-/history-4.10.1.tgz}
     name: history
     version: 4.10.1
     dependencies:
@@ -11722,7 +11722,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/history/5.2.0:
-    resolution: {integrity: sha512-uPSF6lAJb3nSePJ43hN3eKj1dTWpN9gMod0ZssbFTIsen+WehTmEadgL+kg78xLJFdRfrrC//SavDzmRVdE+Ig==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/history/download/history-5.2.0.tgz}
+    resolution: {integrity: sha512-uPSF6lAJb3nSePJ43hN3eKj1dTWpN9gMod0ZssbFTIsen+WehTmEadgL+kg78xLJFdRfrrC//SavDzmRVdE+Ig==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/history/-/history-5.2.0.tgz}
     name: history
     version: 5.2.0
     dependencies:
@@ -14774,7 +14774,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/react-router-dom/5.2.0_react@16.14.0:
-    resolution: {integrity: sha512-gxAmfylo2QUjcwxI63RhQ5G85Qqt4voZpUXSEqCwykV0baaOTQDR1f0PmY8AELqIyVc0NEZUj0Gov5lNGcXgsA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-router-dom/download/react-router-dom-5.2.0.tgz}
+    resolution: {integrity: sha512-gxAmfylo2QUjcwxI63RhQ5G85Qqt4voZpUXSEqCwykV0baaOTQDR1f0PmY8AELqIyVc0NEZUj0Gov5lNGcXgsA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-router-dom/-/react-router-dom-5.2.0.tgz}
     id: registry.npmmirror.com/react-router-dom/5.2.0
     name: react-router-dom
     version: 5.2.0
@@ -14792,7 +14792,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/react-router-dom/5.2.0_react@17.0.2:
-    resolution: {integrity: sha512-gxAmfylo2QUjcwxI63RhQ5G85Qqt4voZpUXSEqCwykV0baaOTQDR1f0PmY8AELqIyVc0NEZUj0Gov5lNGcXgsA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-router-dom/download/react-router-dom-5.2.0.tgz}
+    resolution: {integrity: sha512-gxAmfylo2QUjcwxI63RhQ5G85Qqt4voZpUXSEqCwykV0baaOTQDR1f0PmY8AELqIyVc0NEZUj0Gov5lNGcXgsA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-router-dom/-/react-router-dom-5.2.0.tgz}
     id: registry.npmmirror.com/react-router-dom/5.2.0
     name: react-router-dom
     version: 5.2.0
