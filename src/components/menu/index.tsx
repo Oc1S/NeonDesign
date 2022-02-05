@@ -69,6 +69,7 @@ Menu.SubMenu = SubMenu;
 Menu.propTypes = {
   className: PropTypes.string,
   selectedIndex: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default Menu;

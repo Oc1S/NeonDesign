@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Button } from 'neon-ui';
 import { Modal } from 'neon-ui';
-import '../style'; //实际使用时可全局引入样式或使用babel-plugin-import
-import '../../button/style'; //实际使用时可全局引入样式或使用babel-plugin-import
+/* 实际使用时可全局引入样式或使用babel-plugin-import */
+import '../style';
+import '../../button/style';
 
 export default () => {
   const [isModalShow, setIsModalShow] = useState(false);
@@ -16,13 +17,18 @@ export default () => {
     setIsModalShow(false);
   };
 
-  const title = <span>This is title</span>;
-
   return (
     <>
-      <Button onClick={handleClick}>Click to see default Modal !</Button>
-      <Modal visible={isModalShow} onOk={handleOk} onCancel={handleCancel} title={title}>
-        Hello World!
+      <Button onClick={handleClick}>Click to see custom Modal !</Button>
+      <Modal
+        visible={isModalShow}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        noFooter
+        closeable={false}
+        width="auto"
+      >
+        HelloWorld!
       </Modal>
     </>
   );

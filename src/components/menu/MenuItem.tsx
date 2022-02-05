@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { selectedIndexsContext } from './index';
 import { activeContext } from './SubMenu';
-import { log } from 'console';
 
 const prefix = 'neon-menu-item';
 
@@ -74,6 +73,7 @@ MenuItem.propTypes = {
   index: PropTypes.string.isRequired,
   nav: PropTypes.string,
   className: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 export default MenuItem;
