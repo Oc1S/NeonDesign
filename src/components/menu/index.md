@@ -18,9 +18,8 @@ group:
 ## API
 
 | 参数 | 说明 | 类型 | 默认值 |
-| :-- | :-- | :-- | :-- | 
-| mode | 菜单类型，分为垂直、水平 | `vertical` \| `horizontal` \| `vertical` |
-| openKeys | 当前展开的 SubMenu 菜单项 key 数组 | string[] | - |
+| :-- | :-- | :-- | :-- |
+| mode | 菜单类型，分为垂直、水平 | `vertical` \| `horizontal` \| `vertical` ||
 | selectedIndex | 当前选中的菜单项 index | string | - |
 | style | 根节点样式 | CSSProperties | - |
 | onClick | 点击 MenuItem 调用此函数 | function({ item, key, keyPath, domEvent }) | - |

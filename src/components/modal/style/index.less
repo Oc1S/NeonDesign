@@ -2,10 +2,6 @@
 @import '../../../styles/global.less';
 @import '../../../styles/mixins.less';
 
-/* [id*='modal-'] .@{prefix}-modal{
-
-} */
-
 .@{prefix}-modal {
   position: fixed;
   top: 50%;
@@ -23,6 +19,7 @@
   overflow: hidden;
   animation-duration: 0.5s;
   .dark-bg();
+  .neon-shadow();
   &-title {
     padding: 1rem 2rem 0 1rem;
     font-size: 20px;

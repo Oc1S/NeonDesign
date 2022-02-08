@@ -8,7 +8,6 @@ const prefix = 'neon-modal';
 
 export interface ModalProps {
   visible: boolean;
-  title?: React.ReactNode;
   okText?: string;
   cancelText?: string;
   width?: number | string;
@@ -16,6 +15,7 @@ export interface ModalProps {
   closeable?: boolean;
   modalClassName?: string;
   modalStyle?: React.CSSProperties;
+  title?: React.ReactNode;
   titleClassName?: string;
   titleStyle?: React.CSSProperties;
   bodyClassName?: string;
@@ -132,7 +132,11 @@ const Modal: React.FC<ModalProps> = ({
             </svg>
           </span>
         ) : null}
-        {title && <header className={`${prefix}-title`}>{title}</header>}
+        {title && (
+          <header className={titleClasses} style={titleStyle}>
+            {title}
+          </header>
+        )}
         <div className={bodyClasses} style={bodyStyle}>
           {children}
         </div>
@@ -153,7 +157,7 @@ const Modal: React.FC<ModalProps> = ({
 
 Modal.propTypes = {
   visible: PropTypes.bool.isRequired,
-  title: PropTypes.string,
+  title: PropTypes.node,
   okText: PropTypes.string,
   cancelText: PropTypes.string,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

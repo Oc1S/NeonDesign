@@ -1,5 +1,5 @@
 ---
-遮罩title: Modal 对话框
+title: Modal 对话框
 group:
   title: 反馈
   order: 30
@@ -32,11 +32,11 @@ group:
 | bodyClassName  | 对话框主体内容类名                   | string         | -       |
 | bodyStyle      | 对话框主体内容样式                   | CSSProperties  | -       |
 | mask           | 是否展示遮罩                         | boolean        | true    |
-| maskClosable   | 点击遮罩是否关闭modal                | boolean        | true    |
+| maskClosable   | 点击遮罩是否关闭 modal               | boolean        | true    |
 | maskStyle      | 遮罩样式                             | CSSProperties  | -       |
 | maskClassName  | 遮罩类名                             | string         | -       |
 | onOk           | 点击确定回调                         | function(e)    | -       |
 | onCancel       | 点击取消按钮、遮罩层或右上角叉的回调 | function(e)    | -       |
 | afterClose     | Modal 关闭的回调                     | function       | -       |
-| destroyOnClose | 是否关闭时销毁dom                    | boolean        | false   |
+| destroyOnClose | 是否关闭时销毁 dom                   | boolean        | false   |
 | noFooter       | 是否取消底部按钮                     | boolean        | false   |

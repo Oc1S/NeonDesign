@@ -5,3 +5,5 @@ export { default as Layout } from './components/layout';
 export { default as Menu } from './components/menu';
 export { default as Dropdown } from './components/dropdown';
 export { default as Modal } from './components/modal';
+export { default as Carousel } from './components/carousel';
+export { default as Avatar } from './components/avatar';
