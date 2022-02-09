@@ -2,9 +2,15 @@
 @import '../../../styles/global.less';
 @import '../../../styles/mixins.less';
 
+[id*='avatar-'] .@{prefix}-avatar{
+  margin:  1rem;
+}
+
 .@{prefix}-avatar {
-  width: 4rem;
-  height: 4rem;
+  &-md {
+    width: 3rem;
+    height: 3rem;
+  }
   &-sm {
     width: 2rem;
     height: 2rem;
@@ -12,5 +18,8 @@
   &-lg {
     width: 4rem;
     height: 4rem;
+  }
+  &-circle{
+      border-radius: 50%;
   }
 }

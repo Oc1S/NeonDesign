@@ -1,29 +1,61 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { oneOf } from 'prop-types';
 import classNames from 'classnames';
 
 const prefix = 'neon-avatar';
 
-type sizeType = 'sm' | 'md' | 'lg';
+export type SizeType = 'sm' | 'md' | 'lg';
+export type ShapeType = 'square' | 'circle';
 
 export interface AvatarProps {
-  size?: string | number;
-  shape?: string;
-  src?: string;
+  size?: SizeType | number;
+  shape?: ShapeType;
+  src: string;
   alt?: string;
+  style?: React.CSSProperties;
 }
 
-const Avatar: React.FC<AvatarProps> = ({ src, alt, size, shape, ...rest }) => {
-  const classes = classNames(`${prefix}`);
+type SizeMap = Record<Required<AvatarProps>['size'], string>;
+
+const sizes: SizeMap = {
+  sm: `${prefix}-sm`,
+  md: `${prefix}-md`,
+  lg: `${prefix}-lg`,
+};
+
+const Avatar: React.FC<AvatarProps> = ({
+  src,
+  alt = '',
+  size = 'md',
+  shape = 'circle',
+  style,
+  children,
+  ...rest
+}) => {
+  const classes = classNames(`${prefix}`, {
+    [`${prefix}-circle`]: shape === 'circle',
+    [sizes[size]]: typeof size === 'string',
+  });
+
+  const sizeStyle =
+    typeof size === 'number'
+      ? {
+          width: size,
+          height: size,
+        }
+      : {};
+
   return (
-    <img
-      className={classes}
-      src="https://pic1.zhimg.com/80/v2-f3f9f31f35a8b14b08b276581353852d_720w.jpg?source=1940ef5c"
-      alt=""
-    />
+    <img className={classes} src={src} alt={alt} {...rest} style={{ ...style, ...sizeStyle }} />
   );
 };
 
-Avatar.propTypes = {};
+Avatar.propTypes = {
+  // size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  shape: oneOf(['square', 'circle']),
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  style: PropTypes.object,
+};
 
 export default Avatar;

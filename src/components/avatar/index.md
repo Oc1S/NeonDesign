@@ -11,19 +11,17 @@ group:
 
 ## 代码演示
 
-<code src="./demo/basic" ></code>
+<code src="./demo/basic" title="shape" desc="提供两种形状的头像"></code>
+
+<code src="./demo/size" title="size" desc="除了可选的三种大小外，还可以自定义大小"></code>
 
 ## API
 
 | 属性      | 说明       | 类型          | 默认值 |
 | --------- | ---------- | ------------- | ------ |
-| children | 轮播图内容 | ReactNode | - |
-| className | 轮播图类名 |        string       | - |
-| style     | 轮播图样式 | CSSProperties | - |
-| width | 宽度 | number | 640 |
-| height | 高度 | number | 320 |
-| duration | 切换过渡时间 | string | `0.7s` |
-| autoplay | 是否自动播放 | boolean | false |
-| interval | 自动播放间隔，单位`ms` | number | 3000 |
-| keepAlive | 自动播放时切换标签页是否继续播放 | boolean | false |
-| dotType | 面板指示点类型 | `rectangle` \| `circle` | `rectangle` |
+| className | 类名 |        string       | - |
+| style     | 样式 | CSSProperties | - |
+| src | 头像图片地址，`必填` | string | - |
+| alt | 头像无法显示时的替代文本 | string | `''` |
+| size | 大小 | `md` \| `sm` \| `lg` \| number | `md` |
+

@@ -6,29 +6,15 @@ export default () => (
   <>
     <div>
       <Avatar
-        size="sm"
-        shape="square"
+        size={40}
         src="https://pic1.zhimg.com/80/v2-f3f9f31f35a8b14b08b276581353852d_720w.jpg?source=1940ef5c"
       ></Avatar>
       <Avatar
-        shape="square"
+        size={80}
         src="https://pic1.zhimg.com/80/v2-f3f9f31f35a8b14b08b276581353852d_720w.jpg?source=1940ef5c"
       ></Avatar>
       <Avatar
-        size="lg"
-        shape="square"
-        src="https://pic1.zhimg.com/80/v2-f3f9f31f35a8b14b08b276581353852d_720w.jpg?source=1940ef5c"
-      ></Avatar>
-    </div>
-
-    <div>
-      <Avatar
-        size="sm"
-        src="https://pic1.zhimg.com/80/v2-f3f9f31f35a8b14b08b276581353852d_720w.jpg?source=1940ef5c"
-      ></Avatar>
-      <Avatar src="https://pic1.zhimg.com/80/v2-f3f9f31f35a8b14b08b276581353852d_720w.jpg?source=1940ef5c"></Avatar>
-      <Avatar
-        size="lg"
+        size={160}
         src="https://pic1.zhimg.com/80/v2-f3f9f31f35a8b14b08b276581353852d_720w.jpg?source=1940ef5c"
       ></Avatar>
     </div>
