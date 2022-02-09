@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
-import PropTypes, { oneOf } from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const prefix = 'neon-avatar';
@@ -52,7 +52,7 @@ const Avatar: React.FC<AvatarProps> = ({
 
 Avatar.propTypes = {
   // size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  shape: oneOf(['square', 'circle']),
+  shape: PropTypes.oneOf(['square', 'circle']),
   src: PropTypes.string.isRequired,
   alt: PropTypes.string,
   style: PropTypes.object,

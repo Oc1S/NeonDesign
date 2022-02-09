@@ -7,3 +7,4 @@ export { default as Dropdown } from './components/dropdown';
 export { default as Modal } from './components/modal';
 export { default as Carousel } from './components/carousel';
 export { default as Avatar } from './components/avatar';
+export { default as Badge } from './components/badge';
