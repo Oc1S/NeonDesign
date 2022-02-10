@@ -39,6 +39,7 @@ specifiers:
   less: ^4.1.2
   less-loader: ^10.2.0
   lint-staged: ^12.3.2
+  nanoid: ^3.2.0
   normalize.css: ^8.0.1
   prettier: ^2.5.1
   prop-types: ^15.8.1
@@ -53,6 +54,7 @@ specifiers:
 dependencies:
   '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.7
   animate.css: registry.npmmirror.com/animate.css/4.1.1
+  nanoid: registry.npmmirror.com/nanoid/3.2.0
   normalize.css: registry.npmmirror.com/normalize.css/8.0.1
   prop-types: registry.npmmirror.com/prop-types/15.8.1
 
@@ -13434,12 +13436,11 @@ packages:
     optional: true
 
   registry.npmmirror.com/nanoid/3.2.0:
-    resolution: {integrity: sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/nanoid/download/nanoid-3.2.0.tgz}
+    resolution: {integrity: sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/nanoid/-/nanoid-3.2.0.tgz}
     name: nanoid
     version: 3.2.0
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
-    dev: true
 
   registry.npmmirror.com/needle/2.9.1:
     resolution: {integrity: sha512-6R9fqJ5Zcmf+uYaFgdIHmLwNldn5HbK8L5ybn7Uz+ylX/rnOsSp1AHcvQSrCaFN+qNM1wpymHqD7mVasEOlHGQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/needle/-/needle-2.9.1.tgz}

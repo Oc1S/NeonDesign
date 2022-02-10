@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { selectedIndexsContext } from './index';
+import { selectedIndexContext } from './index';
 import { activeContext } from './SubMenu';
 
 const prefix = 'neon-menu-item';
@@ -23,7 +23,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
   disabled,
   ...rest
 }) => {
-  const { selectedIndex, handleSelectIndex } = useContext(selectedIndexsContext);
+  const { selectedIndex, handleSelectIndex } = useContext(selectedIndexContext);
   const { subItemStateArray, setSubItemStateArray } = useContext(activeContext);
 
   // console.log(index, 'index@state', subItemStateArray);
@@ -31,7 +31,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
   useEffect(() => {
     if (!subItemStateArray) return;
     const subItemIndex = subItemStateArray.findIndex((item) => item.index === index);
-    console.log('index', index, subItemIndex, subItemStateArray);
+    // console.log('index', index, subItemIndex, subItemStateArray);
 
     if (subItemIndex === -1) {
       subItemStateArray.push({ index, active: index === selectedIndex });

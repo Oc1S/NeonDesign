@@ -1,0 +1,44 @@
+@import '../../../styles/variables.less';
+@import '../../../styles/global.less';
+@import '../../../styles/mixins.less';
+
+/* [id^='message-'] .@{prefix}{
+  margin: 1rem;
+} */
+
+.@{prefix}-message {
+  &-wrapper {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    z-index: 1010;
+  }
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.25rem;
+  transform: translate(-50%, 0);
+  .neon-bg();
+  .neon-shadow();
+  animation: messageShow 3s;
+  @keyframes messageShow {
+    0%,
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -0.5rem);
+    }
+    10%,
+    90% {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+  &-icon-close {
+    display: flex;
+    justify-content: center;
+    margin-left: 0.5rem;
+    padding: 0.1rem;
+    cursor: pointer;
+  }
+}

@@ -8,3 +8,5 @@ export { default as Modal } from './components/modal';
 export { default as Carousel } from './components/carousel';
 export { default as Avatar } from './components/avatar';
 export { default as Badge } from './components/badge';
+export { default as Switch } from './components/switch';
+export { default as Message } from './components/message';

@@ -19,12 +19,12 @@ export interface MenuType extends React.FC<MenuProps> {
 }
 
 /* context */
-export interface selectedIndexsContentProps {
+export interface selectedIndexContentProps {
   selectedIndex: string;
   handleSelectIndex: (index: string) => void;
 }
 
-export const selectedIndexsContext = React.createContext({} as selectedIndexsContentProps);
+export const selectedIndexContext = React.createContext({} as selectedIndexContentProps);
 export const typeContext = React.createContext('horizontal');
 
 const Menu: MenuType = ({
@@ -53,13 +53,13 @@ const Menu: MenuType = ({
   );
 
   return (
-    <selectedIndexsContext.Provider value={{ selectedIndex, handleSelectIndex }}>
+    <selectedIndexContext.Provider value={{ selectedIndex, handleSelectIndex }}>
       <typeContext.Provider value={type}>
         <ul className={classes} {...rest}>
           {children}
         </ul>
       </typeContext.Provider>
-    </selectedIndexsContext.Provider>
+    </selectedIndexContext.Provider>
   );
 };
 
