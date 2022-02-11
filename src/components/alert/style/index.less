@@ -1,6 +1,51 @@
+@import '../../../styles/variables.less';
+@import '../../../styles/mixins.less';
+@import '../../../styles/global.less';
+@import '../../../styles/animation.less';
+
+[class$='dumi-default-previewer'] {
+  display: inline-block;
+  width: 44%;
+  margin-right:2rem;
+  .@{prefix}-alert{
+    margin:0 0 1.5rem  0 ;
+  }
+}
+ 
+
 .neon-alert {
-  padding: 1rem;
-  background: white;
-  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-radius: 0.1rem;
   color: white;
+  .neon-bg();
+  &-show{
+    animation:slide-up 5s
+  }
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+  &-content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-content {
+    margin: 0.5rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  &-icon-close {
+    margin: 0 .5rem;
+    cursor: pointer;
+  }
+  &-dark {
+    .dark-bg();
+  }
+  
 }

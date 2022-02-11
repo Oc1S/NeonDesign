@@ -15,7 +15,7 @@ group:
 
 <code src="./demo/basic" ></code>
 
-<code src="./demo/circleDot" ></code>
+<code src="./demo/circleDot" title="指示点类型" desc="指示点类型可以更换为小圆"></code>
 
 ## API
 

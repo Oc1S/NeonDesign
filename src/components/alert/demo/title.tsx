@@ -7,8 +7,7 @@ import '../../message/style';
 export default () => {
   return (
     <>
-      <Alert>Default Alert !</Alert>
-      <Alert type="dark">Dark Alert !</Alert>
+      <Alert title="There's an Alert below">Here I am!</Alert>
     </>
   );
 };

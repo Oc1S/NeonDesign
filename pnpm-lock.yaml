@@ -45,6 +45,7 @@ specifiers:
   prop-types: ^15.8.1
   react: ^17.0.2
   react-dom: ^17.0.2
+  react-fast-marquee: ^1.3.1
   rimraf: ^3.0.2
   serve: ^13.0.2
   through2: ^4.0.2
@@ -98,6 +99,7 @@ devDependencies:
   prettier: registry.npmmirror.com/prettier/2.5.1
   react: registry.npmmirror.com/react/17.0.2
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
+  react-fast-marquee: registry.npmmirror.com/react-fast-marquee/1.3.1_react-dom@17.0.2+react@17.0.2
   rimraf: registry.npmmirror.com/rimraf/3.0.2
   serve: registry.npmmirror.com/serve/13.0.2
   through2: registry.nlark.com/through2/4.0.2
@@ -14762,6 +14764,19 @@ packages:
       object-assign: registry.nlark.com/object-assign/4.1.1
       react: registry.npmmirror.com/react/17.0.2
       scheduler: registry.npmmirror.com/scheduler/0.20.2
+    dev: true
+
+  registry.npmmirror.com/react-fast-marquee/1.3.1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-JUlQMU+IVVNKV+D4BRfRaNEaBj+VyHcI0uupBKyeFhkSY2GBkKw7oGvpNdCkPtKd8Q3H0M5eY7PyUj7AdmKCRA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-fast-marquee/-/react-fast-marquee-1.3.1.tgz}
+    id: registry.npmmirror.com/react-fast-marquee/1.3.1
+    name: react-fast-marquee
+    version: 1.3.1
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    dependencies:
+      react: registry.npmmirror.com/react/17.0.2
+      react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
     dev: true
 
   registry.npmmirror.com/react-is/16.13.1:

@@ -13,6 +13,6 @@
     "resolveJsonModule": true,
     "skipLibCheck": true //不添加history报错
   },
-  "include": ["src", "typings.d.ts"],
+  "include": ["src", "typings.d.ts", "svg.d.ts"],
   "exclude": ["node_modules", "src/**/demo", "src/**/__tests__"]
 }
