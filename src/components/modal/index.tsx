@@ -54,7 +54,6 @@ const Modal: React.FC<ModalProps> = ({
   onOk,
   onCancel,
   afterClose,
-
   ...rest
 }) => {
   const [isRender, setIsRender] = useState(false);

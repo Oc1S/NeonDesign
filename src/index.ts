@@ -10,3 +10,4 @@ export { default as Avatar } from './components/avatar';
 export { default as Badge } from './components/badge';
 export { default as Switch } from './components/switch';
 export { default as Message } from './components/message';
+export { default as Drawer } from './components/drawer';

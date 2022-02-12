@@ -1,0 +1,45 @@
+@import '../../../styles/variables.less';
+@import '../../../styles/global.less';
+@import '../../../styles/mixins.less';
+
+[class$='dumi-default-previewer-demo'] .@{prefix}-btn{
+  margin: 0 1.5rem 2rem 0 ;
+}
+
+.@{prefix}-drawer {
+  position: fixed;
+  top: 0;
+  width: 480px;
+  z-index: 510;
+  height: 100vh;
+  transition:.5s;
+  .dark-bg();
+  &-right{
+    right: 0;
+    transform: translateX(100%);
+  }
+  &-left{
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  &-visible{
+    transform: translate(0);
+    .neon-shadow();
+  }
+  &-title-container{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  &-body{
+    padding: 1rem;
+  }
+  &-mask{
+    .neon-mask();
+  }
+  &-close-icon{
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+}

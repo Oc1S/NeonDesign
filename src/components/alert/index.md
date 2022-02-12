@@ -1,12 +1,11 @@
 ---
 title: Alert 警告提示
 group:
-  title: 展示
-  order: 40
+  title: 反馈
+  order: 30
 ---
 
-
-# Alert  警告提示
+# Alert 警告提示
 
 警告提示，展现需要关注的信息。
 
