@@ -3,8 +3,8 @@
 @import '../../../styles/mixins.less';
 
 [class$='dumi-default-previewer-demo'] {
-  .@{prefix}-input{
-    margin-right: 2rem;
+  .@{prefix}-input-wrapper{
+    margin: 0 2rem 2rem 0;
   }
 }
 
@@ -16,7 +16,28 @@
   color: #fff;
   transition: 0.7s;
   .neon-shadow();
+  &-wrapper{
+    display: inline-block;
+    position: relative;
+  }
+  &-disabled{
+    .neon-disabled();
+    opacity: 0.8;
+  }
+  &-icon-close{
+    position: absolute;
+    top: 50%;
+    right:0.5rem;
+    transform: translateY(-45%);
+    cursor: pointer;
+  }
+  &:focus{
+    .neon-shadow-lg();
+  }
   &::placeholder {
     color: #eee;
+  }
+  &::-ms-reveal{
+    display: none;
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Input } from 'neon-ui';
 /* 实际使用时可全局引入样式或使用babel-plugin-import */
 import '../style';
@@ -6,12 +6,12 @@ import '../style';
 export default () => {
   const [inputValue, setInputValue] = useState('');
 
-  const onChange = (e) => {
-    console.log(e);
+  const onChange = (e: React.ChangeEvent) => {
+    console.log('@change', e);
   };
   return (
     <>
-      <Input /* defaultValue="HELLO WORLD" */ onChange={onChange} placeholder="HI"></Input>
+      <Input onChange={onChange} placeholder="HI" clearable style={{ width: 200 }}></Input>
       <Input defaultValue="HELLO WORLD" onChange={onChange}></Input>
     </>
   );
