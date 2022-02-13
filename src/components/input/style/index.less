@@ -1,0 +1,22 @@
+@import '../../../styles/variables.less';
+@import '../../../styles/global.less';
+@import '../../../styles/mixins.less';
+
+[class$='dumi-default-previewer-demo'] {
+  .@{prefix}-input{
+    margin-right: 2rem;
+  }
+}
+
+.@{prefix}-input {
+  padding: 0.4rem 0.5rem;
+  outline: 0;
+  .dark-bg();
+  border: 0;
+  color: #fff;
+  transition: 0.7s;
+  .neon-shadow();
+  &::placeholder {
+    color: #eee;
+  }
+}

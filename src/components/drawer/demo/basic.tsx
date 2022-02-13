@@ -6,7 +6,7 @@ import '../../button/style';
 import '../../switch/style';
 
 export default () => {
-  const [isDrawerVisible, setIsDrawerVisible] = useState(true);
+  const [isDrawerVisible, setIsDrawerVisible] = useState(false);
   const [checked, setChecked] = useState(false);
   const [placement, setPlacement] = useState('right');
 

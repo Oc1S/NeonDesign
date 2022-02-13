@@ -11,3 +11,5 @@ export { default as Badge } from './components/badge';
 export { default as Switch } from './components/switch';
 export { default as Message } from './components/message';
 export { default as Drawer } from './components/drawer';
+export { default as Spin } from './components/spin';
+export { default as Input } from './components/input';
