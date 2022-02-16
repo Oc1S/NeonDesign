@@ -2,14 +2,18 @@
 @import '../../../styles/global.less';
 @import '../../../styles/mixins.less';
 
-[class$='dumi-default-previewer-demo'] {
-  .@{prefix}-input-wrapper{
-    margin: 0 2rem 2rem 0;
+[id^='input']{
+  [class$='dumi-default-previewer-demo'] {
+    .@{prefix}-input-wrapper{
+      margin: 0 2rem 2rem 0;
+    }
   }
 }
 
 .@{prefix}-input {
   padding: 0.4rem 0.5rem;
+  width:15rem;
+  border-radius: .1rem;
   outline: 0;
   .dark-bg();
   border: 0;
@@ -31,11 +35,14 @@
     transform: translateY(-45%);
     cursor: pointer;
   }
+  &:hover{
+    box-shadow: 0 0 4px 1px rgba(#4995dd, 0.7);
+  }
   &:focus{
     .neon-shadow-lg();
   }
   &::placeholder {
-    color: #eee;
+    color: #ccc;
   }
   &::-ms-reveal{
     display: none;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useContext, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Close } from '../icon';
@@ -18,7 +18,7 @@ export type InputProps = ExternalInputProps & React.InputHTMLAttributes<HTMLInpu
 
 const Input: React.FC<InputProps> = ({
   defaultValue,
-  value,
+  value: valueProp = '',
   onChange,
   onPressEnter,
   addonBefore,
@@ -30,12 +30,18 @@ const Input: React.FC<InputProps> = ({
   wrapperClassName,
   ...rest
 }) => {
+  const [value, setValue] = useState(defaultValue ? defaultValue : valueProp);
+  useEffect(() => {
+    if (valueProp) setValue(valueProp);
+  }, [valueProp]);
+
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [isCloseIconVisible, setIsCloseIconVisible] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     inputRef.current?.value && setIsCloseIconVisible(true);
     !inputRef.current?.value && setIsCloseIconVisible(false);
+    setValue(e.target.value);
     onChange?.(e);
   };
 
@@ -44,8 +50,9 @@ const Input: React.FC<InputProps> = ({
   };
 
   const handleClear = () => {
-    const { current } = inputRef;
-    if (current) current.value = '';
+    /* const { current } = inputRef;
+    if (current) current.value = ''; */
+    setValue('');
     setIsCloseIconVisible(false);
   };
 
@@ -60,10 +67,10 @@ const Input: React.FC<InputProps> = ({
           className={classes}
           onChange={(e) => handleChange(e)}
           onKeyUp={(e) => handlePressEnter(e)}
-          defaultValue={defaultValue}
           value={value}
           disabled={disabled}
           ref={inputRef}
+          spellCheck="false"
           {...rest}
         />
         {clearable && (

@@ -8,12 +8,14 @@ if (process.env.SITE_BUILD_ENV === 'PREVIEW') {
   publicPath = undefined;
 }
 
-const logo = 'https://tva1.sinaimg.cn/large/006wJXbzgy1gz9jf05i6ij30e80e8af4.jpg';
+const logo = 'https://tva1.sinaimg.cn/large/006wJXbzgy1gzfgthghjmj30e80e8gpf.jpg';
+// const logo = 'https://tva1.sinaimg.cn/large/006wJXbzgy1gz9jf05i6ij30e80e8af4.jpg';
 
 export default defineConfig({
   title: 'Neon UI', // 站点名称
   mode: 'site',
   logo,
+  favicon: '/favicon.ico',
   outputPath: 'doc-site', // 输出文件夹
   exportStatic: {}, // 后续会部署到 github pages 直接全部生成静态页面 不走前端路由
   dynamicImport: {}, // 拆包 站点过大时可以优化首屏加载速度

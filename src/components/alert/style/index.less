@@ -3,15 +3,15 @@
 @import '../../../styles/global.less';
 @import '../../../styles/animation.less';
 
-[class$='dumi-default-previewer'] {
-  display: inline-block;
-  width: 44%;
-  margin-right:1rem;
-  .@{prefix}-alert{
-    margin:0 0 1.5rem  0 ;
+// [class$='dumi-default-previewer']
+  [id*='alert'].__dumi-default-previewer  {
+    display: inline-block;
+    width: 44%;
+    margin-right:1rem;
+    .@{prefix}-alert{
+      margin:0 0 1.5rem  0 ;
+    }
   }
-}
- 
 
 .neon-alert {
   display: flex;

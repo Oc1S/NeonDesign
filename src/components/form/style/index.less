@@ -1,0 +1,60 @@
+@import '../../../styles/variables.less';
+@import '../../../styles/global.less';
+@import '../../../styles/mixins.less';
+@import '../../../styles/animation.less';
+
+/* [class$='dumi-default-previewer-demo'] {
+} */
+.@{prefix}-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-item {
+    display: flex;
+    height: 4rem;
+    &-vertical {
+      height: 5rem;
+      .@{prefix}-form-item-label{
+        padding: 0 0.3rem 0.2rem 0.3rem;
+      }
+    }
+    &-label {
+      padding: 0.3rem;
+      font-size: 0.9em;
+      &-required {
+        &::before {
+          content: '*';
+          color: @neon-red;
+          padding: 0 0.1em;
+        }
+      }
+      &-colon {
+        &::after {
+          content: ':';
+          padding: 0 0.1em;
+        }
+      }
+    }
+
+    &-warning {
+      margin: 0.2em 0;
+      font-size: 0.8em;
+      color: @neon-red;
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+      &-show {
+        animation: slide-in-down 0.5s;
+      }
+      &-hide {
+        opacity: 0;
+        animation: slide-out-up 0.5s;
+      }
+    }
+  }
+  .@{prefix}-btn{
+    margin-top: 1rem;
+  }
+}

@@ -50,7 +50,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
     if (disabled) return;
     e.stopPropagation();
 
-    !!onClick && onClick(e);
+    onClick?.(e);
 
     !!nav && history.push(nav);
 

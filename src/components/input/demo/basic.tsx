@@ -6,8 +6,8 @@ import '../style';
 export default () => {
   const [inputValue, setInputValue] = useState('');
 
-  const onChange = (e: React.ChangeEvent) => {
-    console.log('@change', e);
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log('@change', e.target.value);
   };
   return (
     <>
