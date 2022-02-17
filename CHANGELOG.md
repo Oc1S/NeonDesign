@@ -1,4 +1,8 @@
-## 1.0.1-1 (2022-02-17)
+## [1.0.1-2](https://github.com/Oc1S/NeonUI/compare/v1.0.1-1...v1.0.1-2) (2022-02-17)
+
+
+
+## [1.0.1-1](https://github.com/Oc1S/NeonUI/compare/d7ab4ec4e5821f0633559f1f8474964aa08c4fe3...v1.0.1-1) (2022-02-17)
 
 
 ### Bug Fixes
