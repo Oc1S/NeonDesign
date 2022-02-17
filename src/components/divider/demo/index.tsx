@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider } from 'neon-ui';
+import { Divider } from 'neon-design';
 import '../style'; //实际使用时可全局引入样式或使用babel-plugin-import
 
 export default () => (

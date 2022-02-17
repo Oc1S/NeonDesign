@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert } from 'neon-ui';
+import { Alert } from 'neon-design';
 import Marquee from 'react-fast-marquee';
 /* 实际使用时可全局引入样式或使用babel-plugin-import */
 import '../style';

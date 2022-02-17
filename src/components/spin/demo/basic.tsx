@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Spin } from 'neon-ui';
+import React, { useState } from 'react';
+import { Button, Spin } from 'neon-design';
 /* 实际使用时可全局引入样式或使用babel-plugin-import */
 import '../style';
 import '../../button/style';

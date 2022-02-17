@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Input } from 'neon-ui';
+import { Input } from 'neon-design';
 /* 实际使用时可全局引入样式或使用babel-plugin-import */
 import '../style';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Badge } from 'neon-ui';
+import { Avatar, Badge } from 'neon-design';
 /* 实际使用时可全局引入样式或使用babel-plugin-import */
 import '../style';
 

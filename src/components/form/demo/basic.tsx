@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Button } from 'neon-ui';
+import { Form, Input, Button } from 'neon-design';
 import FormItem from '../FormItem';
 /* 实际使用时可全局引入样式或使用babel-plugin-import */
 import '../style';

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from 'neon-ui';
-import { Modal } from 'neon-ui';
+import { Button, Modal } from 'neon-design';
 import '../style'; //实际使用时可全局引入样式或使用babel-plugin-import
 import '../../button/style'; //实际使用时可全局引入样式或使用babel-plugin-import
 
