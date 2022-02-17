@@ -1,4 +1,9 @@
-## 1.0.1-0 (2022-02-17)
+## 1.0.1-1 (2022-02-17)
+
+
+### Bug Fixes
+
+* **package name:** have to change the name because of the existing package of npm ([c4ebd23](https://github.com/Oc1S/NeonUI/commit/c4ebd23cd856a79dfebb85440aa58dd6313034a3))
 
 
 ### Features
