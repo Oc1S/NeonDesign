@@ -1,6 +1,6 @@
 {
-  "name": "neon-ui",
-  "version": "1.0.1-2",
+  "name": "neon-design",
+  "version": "1.0.1-0",
   "description": "",
   "main": "lib/index.js",
   "module": "esm/index.js",
