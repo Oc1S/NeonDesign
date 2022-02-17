@@ -70,7 +70,7 @@ async function updateVersion(nextVersion: string) {
   pkg.version = nextVersion;
   timeLog('修改package.json版本号', 'start');
   await fs.writeFileSync(path.resolve(__dirname, './../package.json'), JSON.stringify(pkg));
-  await run('npx prettier package.json --write');
+  await run('pnpm prettier package.json --write');
   timeLog('修改package.json版本号', 'end');
 }
 
@@ -79,7 +79,7 @@ async function updateVersion(nextVersion: string) {
  */
 async function generateChangelog() {
   timeLog('生成CHANGELOG.md', 'start');
-  await run(' npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0');
+  await run('conventional-changelog -p angular -i CHANGELOG.md -s -r 0');
   timeLog('生成CHANGELOG.md', 'end');
 }
 
@@ -99,7 +99,7 @@ async function push(nextVersion: string) {
  */
 async function build() {
   timeLog('组件库打包', 'start');
-  await run('npm run build');
+  await run('pnpm run build');
   timeLog('组件库打包', 'end');
 }
 
@@ -108,7 +108,7 @@ async function build() {
  */
 async function publish() {
   timeLog('发布组件库', 'start');
-  await run('npm publish');
+  await run('pnpm publish');
   timeLog('发布组件库', 'end');
 }
 
