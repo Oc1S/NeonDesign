@@ -1,3 +1,12 @@
+## [1.0.2-0](https://github.com/Oc1S/NeonUI/compare/v1.0.1...v1.0.2-0) (2022-02-21)
+
+
+### Bug Fixes
+
+* **component:** remove dependency on animate.css ([dd0d359](https://github.com/Oc1S/NeonUI/commit/dd0d3592cb48ea07f513f11b7565f0bdf8e12c9e))
+
+
+
 ## [1.0.1](https://github.com/Oc1S/NeonUI/compare/v1.0.1-2...v1.0.1) (2022-02-21)
 
 
