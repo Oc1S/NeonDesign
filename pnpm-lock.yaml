@@ -24,7 +24,6 @@ specifiers:
   '@umijs/fabric': ^2.10.1
   '@umijs/runtime': ^3.5.20
   animate.css: ^4.1.1
-  chalk: ^5.0.0
   classnames: ^2.3.1
   commitizen: ^4.2.4
   conventional-changelog: ^3.1.25
@@ -90,7 +89,6 @@ devDependencies:
   '@types/testing-library__react': registry.npmmirror.com/@types/testing-library__react/10.2.0_react-dom@17.0.2+react@17.0.2
   '@umijs/fabric': registry.npmmirror.com/@umijs/fabric/2.10.1
   '@umijs/runtime': 3.5.20_react@17.0.2
-  chalk: 5.0.0
   commitizen: registry.npmmirror.com/commitizen/4.2.4_@types+node@17.0.13
   conventional-changelog: registry.npmmirror.com/conventional-changelog/3.1.25
   cpr: registry.npmmirror.com/cpr/3.0.1
@@ -352,11 +350,6 @@ packages:
     dependencies:
       ansi-styles: registry.npmmirror.com/ansi-styles/4.3.0
       supports-color: registry.npmmirror.com/supports-color/7.2.0
-    dev: true
-
-  /chalk/5.0.0:
-    resolution: {integrity: sha512-/duVOqst+luxCQRKEo4bNxinsOQtMP80ZYm7mMqzuh5PociNL0PvmHFvREJ9ueYL2TxlHjBcmLCdmocx9Vg+IQ==}
-    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: true
 
   /classnames/2.3.1:

@@ -4,16 +4,16 @@ import fs from 'fs';
 import path from 'path';
 import child_process from 'child_process';
 import util from 'util';
-import chalk from 'chalk';
 import semverInc from 'semver/functions/inc';
 import { ReleaseType } from 'semver';
+// import chalk from 'chalk';
 
 import pkg from '../package.json';
 
 const exec = util.promisify(child_process.exec);
 
 const run = async (command: string) => {
-  console.log(chalk.green(command));
+  console.log(command);
   await exec(command);
 };
 
