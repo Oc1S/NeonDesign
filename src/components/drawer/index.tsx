@@ -70,7 +70,7 @@ const Drawer: React.FC<DrawerProps> = ({
     <>
       <div className={classes} style={{ ...style, width }} {...rest}>
         <div className={`${prefix}-title-container`}>
-          <Close className={`${prefix}-close-icon`} onClick={(e) => handleClose(e)}></Close>
+          <Close className={`${prefix}-close-icon`} onClick={handleClose}></Close>
           <div className={`${prefix}-title`} style={titleStyle}>
             {title}
           </div>

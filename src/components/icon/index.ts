@@ -1,1 +1,1 @@
-export { ReactComponent as Close } from './close.svg';
+export { default as Close } from './close';
