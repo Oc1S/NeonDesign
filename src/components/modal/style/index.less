@@ -20,6 +20,14 @@
   animation-duration: 0.5s;
   .dark-bg();
   .neon-shadow();
+  &-visible{
+    animation-name: zoomIn;
+  }
+  &-invisible{
+    animation-name: zoomOut;
+    opacity: 0;
+    pointer-events: none;
+  }
   &-title {
     padding: 1rem 2rem 0 1rem;
     font-size: 20px;
@@ -38,9 +46,7 @@
     margin: 1rem;
     padding: 0.5rem 1rem !important;
   }
-  &-invisible {
-    pointer-events: none;
-  }
+  
 }
 .@{prefix}-mask{
   position: fixed;
@@ -56,4 +62,20 @@
   top: 1rem;
   right: 1rem;
   cursor: pointer;
+}
+@keyframes zoomIn {
+  0%{    
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }50%{
+    opacity: 1;
+  }
+}
+@keyframes zoomOut {
+  0%{    
+    opacity: 1;
+  }50%{
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
 }
