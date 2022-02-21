@@ -1,3 +1,12 @@
+## [1.0.2-2](https://github.com/Oc1S/NeonUI/compare/v1.0.2-1...v1.0.2-2) (2022-02-21)
+
+
+### Bug Fixes
+
+* **file name:** fix filename of Layout component ([03a6dbc](https://github.com/Oc1S/NeonUI/commit/03a6dbc9776938613020c722a9367d6317e38a9d))
+
+
+
 ## [1.0.2-1](https://github.com/Oc1S/NeonUI/compare/v1.0.2-0...v1.0.2-1) (2022-02-21)
 
 

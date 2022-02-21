@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 import { prefix } from './index';
-import Sider from './sider';
-import Content from './content';
+import Sider from './Sider';
+import Content from './Content';
 
 /* export interface LayoutMainProps {
   className?: string;

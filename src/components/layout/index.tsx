@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Header from './Header';
 import Main from './Main';
-import Footer from './footer';
+import Footer from './Footer';
 
 export const prefix = 'neon-layout';
 
