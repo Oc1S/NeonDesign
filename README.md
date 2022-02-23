@@ -1,4 +1,4 @@
-# Neon-design
+# Neon-Design
 
 <div align="center" height="160">
   <img  style="height:160px;width:160px;" height="160" width="160" src="https://tva1.sinaimg.cn/large/006wJXbzgy1gzfgthghjmj30e80e8gpf.jpg" />
@@ -8,6 +8,8 @@
     <img src="https://img.shields.io/npm/v/neon-design?style=for-the-badge" alt="npm-version" />
     <img src="https://img.shields.io/npm/l/neon-design?style=for-the-badge" alt="license" />
 </div>
+
+> detail:[详细信息](https://ui.xaneon.com)
 
 
 ## Quick start
