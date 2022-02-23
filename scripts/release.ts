@@ -1,4 +1,5 @@
-/* eslint-disable  import/no-extraneous-dependencies,@typescript-eslint/camelcase, no-console */
+{
+} /* eslint-disable  import/no-extraneous-dependencies,@typescript-eslint/camelcase, no-console */
 import inquirer from 'inquirer';
 import fs from 'fs';
 import path from 'path';

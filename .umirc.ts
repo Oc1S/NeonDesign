@@ -1,7 +1,7 @@
 import { defineConfig } from 'dumi';
 
-let base = '/NeonUI';
-let publicPath = '/NeonUI/';
+let base = '/NeonDesign';
+let publicPath = '/NeonDesign/';
 
 if (process.env.SITE_BUILD_ENV === 'PREVIEW') {
   base = undefined;
@@ -9,12 +9,11 @@ if (process.env.SITE_BUILD_ENV === 'PREVIEW') {
 }
 
 const logo = 'https://tva1.sinaimg.cn/large/006wJXbzgy1gzfgthghjmj30e80e8gpf.jpg';
-// const logo = 'https://tva1.sinaimg.cn/large/006wJXbzgy1gz9jf05i6ij30e80e8af4.jpg';
 
 export default defineConfig({
-  title: 'Neon UI', // 站点名称
+  title: 'Neon Design', // 站点名称
   mode: 'site',
-  logo,
+  logo: '/images/logo.png',
   favicon: '/favicon.ico',
   outputPath: 'doc-site', // 输出文件夹
   exportStatic: {}, // 后续会部署到 github pages 直接全部生成静态页面 不走前端路由
@@ -22,8 +21,16 @@ export default defineConfig({
   navs: [
     // null, // null 值代表保留约定式生成的导航，只做增量配置
     {
+      title: '快速开始',
+      path: '/guide/quick-start',
+    },
+    {
       title: '组件',
       path: '/components',
+    },
+    {
+      title: 'GitHub',
+      path: 'https://github.com/Oc1S/NeonDesign',
     },
   ],
   base,
