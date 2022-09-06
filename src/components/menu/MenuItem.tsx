@@ -1,12 +1,10 @@
 import React, { useContext, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { selectedIndexContext } from './index';
 import { activeContext } from './SubMenu';
 
 const prefix = 'neon-menu-item';
-
 export interface MenuItemProps extends React.HTMLAttributes<HTMLElement> {
   className?: string;
   nav?: string;
@@ -25,14 +23,9 @@ const MenuItem: React.FC<MenuItemProps> = ({
 }) => {
   const { selectedIndex, handleSelectIndex } = useContext(selectedIndexContext);
   const { subItemStateArray, setSubItemStateArray } = useContext(activeContext);
-
-  // console.log(index, 'index@state', subItemStateArray);
-
   useEffect(() => {
     if (!subItemStateArray) return;
     const subItemIndex = subItemStateArray.findIndex((item) => item.index === index);
-    // console.log('index', index, subItemIndex, subItemStateArray);
-
     if (subItemIndex === -1) {
       subItemStateArray.push({ index, active: index === selectedIndex });
       /*
@@ -45,15 +38,10 @@ const MenuItem: React.FC<MenuItemProps> = ({
     }
   }, [selectedIndex]);
 
-  const history = useHistory();
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     if (disabled) return;
     e.stopPropagation();
-
     onClick?.(e);
-
-    !!nav && history.push(nav);
-
     handleSelectIndex?.(index);
   };
 

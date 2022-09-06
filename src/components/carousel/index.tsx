@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { nanoid } from 'nanoid';
 
 const prefix = 'neon-carousel';
 
@@ -56,15 +57,15 @@ const Carousel: React.FC<CarouselProps> = ({
 
       childrenCountRef.current !== 1
         ? setChildren([
-            { ...lastChild, id: Math.random().toString() },
+            { ...lastChild, id: nanoid() },
             ...children,
-            { ...firstChild, id: Math.random().toString() },
+            { ...firstChild, id: nanoid() },
           ])
         : setChildren([
-            { ...lastChild, id: Math.random().toString() },
+            { ...lastChild, id: nanoid() },
             ...children,
-            { ...firstChild, id: Math.random().toString() },
-            { ...firstChild, id: Math.random().toString() },
+            { ...firstChild, id: nanoid() },
+            { ...firstChild, id: nanoid() },
           ]);
     }
   }, []);
@@ -109,6 +110,8 @@ const Carousel: React.FC<CarouselProps> = ({
     startInterval();
     return () => autoplayTimer.current && clearInterval(autoplayTimer.current);
   }, []);
+
+  // 页面不显示时关闭定时器
   useEffect(() => {
     if (!keepAlive && autoplay) {
       let visibilityChangeListener = () => {
@@ -126,10 +129,8 @@ const Carousel: React.FC<CarouselProps> = ({
   }, []);
 
   const startInterval = () => {
-    autoplayTimer.current && clearInterval(autoplayTimer.current);
+    !!autoplayTimer.current && clearInterval(autoplayTimer.current);
     autoplayTimer.current = setInterval(() => {
-      console.log(1);
-
       intervalCallbackRef.current?.();
     }, intervalTime);
   };

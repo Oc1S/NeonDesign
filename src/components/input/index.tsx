@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect, useContext, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Close } from '../icon';

@@ -3,6 +3,9 @@ import { defineConfig } from 'dumi';
 let base = '/NeonDesign';
 let publicPath = '/NeonDesign/';
 
+/* let base = undefined;
+let publicPath = undefined; */
+
 if (process.env.SITE_BUILD_ENV === 'PREVIEW') {
   base = undefined;
   publicPath = undefined;

@@ -1,9 +1,11 @@
+.vscode
+
 node_modules
 esm
 lib
-
 .umi
 .umi-production
 
 doc-site
+.pnpm-debug.log
 

@@ -120,7 +120,7 @@ const Spin: React.FC<SpinProps> = ({
 }) => {
   const [rendered, setRendered] = useState(spinning);
 
-  const setRenderedDebounce = useDebounce((rendered) => {
+  const setRenderedDebounce = useDebounce((rendered: boolean) => {
     setRendered(rendered);
   }, delay);
 

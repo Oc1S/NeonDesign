@@ -21,7 +21,7 @@ export interface MessageProps {
 
 const Message: React.FC<MessageProps> = ({
   content,
-  type, //waitForType
+  // type, //waitForType
   removeById,
   id,
   closeable,
